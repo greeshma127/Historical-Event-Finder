@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Historical Event Finder</title>
+        <link rel="stylesheet" href="/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>   
+    <body>
+        <div class="container">
+            <h2>Historical Event Finder</h2>
+            <form method="post">
+                <label>Enter the Date:</label>
+                <input type="text" name="date"><br><br>
+                <label>Enter the Month:</label>
+                <input type="text" name="month"><br><br>
+                <input type="submit" value="Events" formaction="/get-events/">
+                <input type="submit" value="Deaths" formaction="/get-deaths/">
+                <input type="submit" value="Births" formaction="/get-births/">
+
+            </form>
+            <% if (content) { %>
+                <h4>Event:</h2>
+                <p><%= content.events %> - <%= content.description %></p>
+            <% } else if (content2) { %>
+                <h4>Deaths:</h2>
+                <p><%= content2.events %> - <%= content2.description %></p>
+            <% } else if(content3) { %>
+                <h4>Births:</h2>
+                <p><%= content3.events %> - <%= content3.description %></p>
+            <% } else if(locals.error){ %>
+                <br><p>An error occured</p>
+                <% } %>
+        </div>
+    </body>
+</html>

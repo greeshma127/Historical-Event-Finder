@@ -1,0 +1,84 @@
+body{
+    background-color: #F1E5D1;
+}
+
+.container{
+    background-color: #DBB5B5;
+    height: 490px;
+    width: 450px;
+    align-items: center;
+    font-size: 25px;
+    padding-left: 130px;
+    margin: 30 0 0 350;
+    padding-top: 3px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px black;
+}
+
+input{
+    height: 30px;
+    width: 130px;
+}
+
+input[type="submit"]{
+    height: 30px;
+    width: 100px;
+    margin-left: 0px;
+    font-weight: bold;
+    background-color: 987070;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color:white;
+    transition: 0.5s;
+    color: black;
+}
+
+label{
+    font-size: 23px;
+}
+
+p{
+    font-size: 20px;
+    margin-left: -80px;
+    margin-right: 50px;
+}
+
+h4{
+    margin-left: -80px;
+}
+
+h2{
+    font-family: "DM Serif Display";
+    color: rgb(88, 83, 83);
+    margin-left: -20px;
+}
+
+@media(max-width: 412px) {
+    .container {
+        width: 200px;
+        height: 600px;
+        margin-left: 20;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-left: -80;
+    }
+
+    label {
+        font-size: 20px;
+        margin-left: -90;
+    }
+
+    p, h4 {
+        font-size: 18px;
+    }
+
+    input[type="submit"]{
+        margin: 3px;
+    }
+}
